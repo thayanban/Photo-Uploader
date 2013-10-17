@@ -27,9 +27,7 @@ app.get('/register.html', function(req, res) {
 	var stream = fs.createReadStream(__dirname + "/public/register.html");
 	stream.pipe(res);
 });
-app.post('/photo-upload', function(req, res){
-    var image = req.body
-    , albumName = image.alname
-    , imageName = image.fname
-    ;
 app.listen(3000);
+exports.app = app;
+var post = require('./lib/post')
+;
